@@ -1,0 +1,254 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.light {
+    --dark: #000000;
+    --light: #ffffff;
+}
+.dark {
+    --dark: #ffffff;
+    --light: #000000;
+}
+
+.home{
+    background-image: url("../assets/img/Homebg.png");
+    background-size: cover;
+    height: 100vh;
+}
+
+.home .logo .title {
+    color:white;
+    font: size 20px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.home .homeright {
+    color:white
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home .homeright {
+    background-color: rgba(0, 0, 0, 0.534);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.home .hometext{
+    padding: 20px;
+    font-size: 35px;
+}
+.iconbottom{
+    font-size: 30px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+/* about */
+
+.about{
+    text-align: center;
+    padding: 10px;
+}
+
+.about h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--dark);
+
+}
+
+.about p{
+    padding: 10px;
+    line-height: 1.6;
+    color: var(--dark);
+
+}
+
+.about .images{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .img{
+    position: relative;
+}
+
+.about .flowimg{
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+.about img{
+    width: 100%;
+    height: 100%;
+}
+
+.about .flowimg a{
+    border: 1px white solid;
+    padding: 3px 15px 3px 15px;
+    text-decoration: none;
+    color: white;
+    margin-top: 6px;
+}
+.about .flowimg img{
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+/* planing */
+.planing{
+    margin: 50px 0 50px 0;
+    background-image: url(../assets/img/planing/starter\ bg.png);
+}
+.planing .images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planing .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+align-items: center;    text-align: center;
+    color: #ffffff;
+    margin: 50px 0 50px 0 ;
+    height: 150px;
+}
+.planing .text h3{
+    font-size: 30px;
+}
+.planing a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: black;
+    padding: 5px 20px 5px 20px ;
+    border-radius: 5px;
+
+}
+
+
+/* services */
+
+
+.services .text{
+    text-align: center;
+}
+
+.services .text  h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--dark);
+
+}
+
+.services .text  p{
+    padding: 60px 10px 60px 10px;
+    line-height: 1.6;
+    color: var(--dark);
+
+}
+
+
+.services .images{
+    display: grid;
+    grid-template-columns: auto;
+
+}
+
+.services .images .item{
+    background-color: #f3f3f3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.services .images .item p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.services .images .img{
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.services .images .img .flowimg{
+    position: absolute;
+    background-color: #f6ad389d;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* top: 100%; */
+}
+
+
+@media screen and (min-width: 600px) {
+    .home {
+        flex-direction: row;
+    }
+    .home .homeright{
+        height: 100% !important;
+        width: 50vw;
+    }
+
+    .about .images{
+        flex-direction: row;
+    }
+    .about p{
+        padding: 10px 200px 10px 200px;
+    }
+    /* planing */
+    .planing .images{
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    /* services */
+
+    .services .images{
+        grid-template-columns: auto auto auto;
+    }
+    
+  }
