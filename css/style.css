@@ -230,6 +230,59 @@ align-items: center;    text-align: center;
 }
 
 
+
+/* portfolio */
+
+.portfolio{
+    margin: 40px 0 40px 0;
+}
+.portfolio .text {
+    text-align: center;
+}
+.portfolio .text  h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--dark);
+
+}
+
+.portfolio .text  p{
+    padding: 60px 10px 60px 10px;
+    line-height: 1.6;
+    color: var(--dark);
+
+}
+
+
+
+/* tweet */
+.tweet{
+    background-image: url(../assets/img/tweet/tweet\ bg.png);
+    background-size: cover;
+    padding: 70px 0 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.tweet a{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: black;
+    padding: 5px 20px 5px 20px ;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    
+}
+
+.tweet p{
+    text-align: center;
+    line-height: 1.6;
+
+}
+
+
 @media screen and (min-width: 600px) {
     .home {
         flex-direction: row;
@@ -255,7 +308,8 @@ align-items: center;    text-align: center;
     /* services */
 
     .services .images{
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 0 30px 0 30px;
     }
-    
+
   }
