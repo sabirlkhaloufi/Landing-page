@@ -2,23 +2,58 @@
   padding: 0;
   margin: 0;
 }
-.light {
-  --dark: #000000;
-  --light: #ffffff;
-}
+
+
+/* class for darkmode */
 .dark {
   --dark: #ffffff;
   --light: #000000;
+  transition: 0.5s ease-in-out;
+}
+
+
+/* class for lightmode */
+
+.light {
+  --dark: #000000;
+  --light: #ffffff;
+  transition: 0.5s ease-in-out;
+
 }
 
 
 
+body{
+  background-color: var(--light);
+}
+
+
+
+.mode{
+  position: fixed;
+  bottom:  10px;
+  right: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 50%;
+  font-size: 35px;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.d-none{
+  display: none;
+}
+.lightmode{
+  background-color: #dc9118;
+}
+.darkmode{
+  background-color: white;
+}
 /* menu */
-.hide-menu{
-    right: -100vw !important;
+.show-menu{
+    right: 0 !important;
     transition: 0.3s ease-in-out;
-
-
 }
 .menulink{
     position: fixed;
@@ -33,6 +68,7 @@
     align-items: center;
     gap: 30px;
     transition: 0.3s ease-in-out;
+    right: -100vw;
 }
 
 .menulink .logo{
@@ -62,12 +98,10 @@
 .menulink i{
     position: absolute;
     top: 10px;
-    right: 30px;
-    font-size: 30px;
+    right: 10px;
+    font-size: 35px;
     cursor: pointer;
 }
-
-
 
 .home {
   background-image: url("../assets/img/Homebg.png");
@@ -288,6 +322,13 @@
   color: var(--dark);
 }
 
+
+
+
+.imagesGallery .item img{
+  width: 100%;
+  height: 100%;
+}
 .portfolio .text p {
   padding: 60px 10px 60px 10px;
   line-height: 1.6;
@@ -416,4 +457,92 @@ footer .copyright {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 30px 0 30px;
   }
+
+
+  /* portfolio */
+
+
+
+  .imagesGallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    justify-content: center;
+  }
+
+  .imagesGallery .left{
+    display: grid;
+  }
+
+  .imagesGallery .right{
+    display: grid;
+  }
+
+  
+  .item10{
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  .item2{
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .item9{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .item11{
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+  .item12{
+    grid-column: 2/2;
+    grid-row: 3/3;
+  }
+
+  
+
+
+
+  .item1{
+    grid-column: 1/2;
+    grid-row: 0.5/2;
+  }
+  .item3{
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+
+
+  .item5{
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+
+  .item15{
+    grid-column: 2/2;
+    grid-row: 2/4;
+  }
+
+  .item8{
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .item16{
+    grid-column: 2/2;
+    grid-row: 3/4;
+  }
+
+  .item17{
+    grid-column: 1/2;
+    grid-row: 4/4;
+  }
+
+  .item13{
+    grid-column: 2/2;
+    grid-row: 4/4;
+  }
+  
+
 }
